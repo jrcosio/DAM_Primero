@@ -1,0 +1,9 @@
+UEFI, GPT y MBR  https://youtu.be/I8jFHTE9OkA
+NTFS, ext4, exFAT y FAT32 https://youtu.be/60TOqlGonuQ
+Inicializar discos, crear volúmenes y reducir o extender particiones en Windows 10 https://youtu.be/zm3pZ0HlppY
+Como activar la cuenta de administrador oculta en Windows 10 https://youtu.be/N3sfOkUPI3o
+Como en Virtualbox se pueden instalar dos Windows 10 en un solo disco duro https://youtu.be/lyB-zJXb6uI
+Como instalar dos sistemas operativos en la misma máquina (VirtualBox) https://youtu.be/8f75m_2XBb4
+CAMBIAR NOMBRE SISTEMA OPERATIVO en gestor de ARRANQUE DUAL Windows 10 https://youtu.be/3GMYS4MKtV8
+Como utilizar la Consola de Windows (Comandos básicos CMD)  https://youtu.be/W6434nulBu8
+Simbolo del Sistema vs PowerShell ¿Cuál es la diferencia? https://youtu.be/Ej82nzcpFGk

@@ -1,0 +1,24 @@
+Enlaces Interesantes Tema 4
+
+Administración de Usuarios y Grupos
+Comandos para crear usuarios y grupos en Windows 10 https://youtu.be/7SdSKjCu7UQ
+Crear cuentas Locales en Windows 10 de Administrador, Usuario Estandar (Diferencia entre ellas) https://youtu.be/l7m_MN070Zs
+
+NTFS, Permisos
+Permisos en sistemas de archivos NTFS | | UPV https://youtu.be/pr6KthY69Rw
+
+Diseño de permisos en sistemas de archivos NTFS | | UPV https://youtu.be/CdlP_akUi94
+
+
+Registro de Windows
+Windows 10 Registro https://youtu.be/6B6GLk1_85A
+
+Directivas de Grupo
+Habilitar Editor de directivas de grupo local (gpedit.msc) en Windows 10 Home https://youtu.be/HBl7Anb59Fo
+
+
+Utilidades de Windows
+Windows 10 Particiones con el Administrador de Discos https://youtu.be/0K03vn8VF5Y
+Particiones con Gparted https://youtu.be/kRayBB4Bhb4
+Windows 10- 01 Puntos de Restauración https://youtu.be/4NjCL760k98
+

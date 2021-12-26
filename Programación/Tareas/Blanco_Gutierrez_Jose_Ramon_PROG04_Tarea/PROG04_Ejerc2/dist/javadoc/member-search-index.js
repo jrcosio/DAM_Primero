@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"prog04_ejerc2","c":"PROG04_Ejerc2","l":"esPrimo(int)"},{"p":"prog04_ejerc2","c":"PROG04_Ejerc2","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"prog04_ejerc2","c":"PROG04_Ejerc2","l":"PROG04_Ejerc2()","url":"%3Cinit%3E()"}]

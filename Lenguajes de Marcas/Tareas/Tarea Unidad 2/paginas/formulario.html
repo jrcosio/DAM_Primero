@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formumario LMSGI</title>
+    <link rel="stylesheet" href="../css/formulario.css">
+</head>
+<body>
+    <div id=layout>
+        <header>
+            <h1>Hotel Suite Madeira</h1>
+            <h2>José Ramón Blanco</h2>
+           
+        </header>
+        <section>
+            <h1>REGÍSTRATE</h1>
+            <form name="registrate" action="mailto:info@tarea2delmsgi.es" method="post" enctype="text/plain">
+                <fieldset>
+                    <legend>Rellena los siguientes datos</legend>
+
+                    <label for="editNombre">Nombre:</label>
+                    <input type="text" name="Nombre" id="editNombre" size="22" maxlength="22" required>
+                    <label for="editApellidos">Apellidos:</label>
+                    <input type="text" name="Apellidos" id="editApellidos" size="30" maxlength="30" required>
+                    <br><br>
+                    <label for="editEmail">Correo Electronico:</label>
+                    <input type="text" name="email" id="editEmail" size="58" maxlength="58" required>
+                    <br><br>
+
+                    <fieldset>
+                        <legend>Tipo de habitación</legend>
+                        <input type="radio" id="individual" name="tipo_habitacion" value="Individual">
+                        <label for="individual">Individual</label>
+
+                        <input type="radio" id="doble" name="tipo_habitacion" value="Doble">
+                        <label for="doble">Doble</label>
+
+                        <input type="radio" id="familiar" name="tipo_habitacion" value="Familiar">
+                        <label for="familiar">Familiar</label>
+
+                        <input type="radio" id="suite" name="tipo_habitacion" value="Suite">
+                        <label for="suite">Suite</label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Servicios del hotel</legend>
+                        <input type="checkbox" name="parking" id="parking">
+                        <label for="parking">Parking</label>
+
+                        <input type="checkbox" name="guarderia" id="guarderia">
+                        <label for="guarderia">Guardería</label>
+
+                        <input type="checkbox" name="spa" id="spa">
+                        <label for="spa">Spa</label>
+
+                        <input type="checkbox" name="piscina" id="piscina">
+                        <label for="piscina">Piscina</label>
+
+                        <input type="checkbox" name="pelu" id="pelu">
+                        <label for="pelu">Peluquería</label>
+
+                    </fieldset>
+                    <br><br>
+                
+                    <label for="actividad"> Elige una actividad complementaria</label>
+                    <select name="Actividad" id="actividad">
+                        <option value="none">Ninguna actividad</option>
+                        <option value="bici">Alquiler de bicicletas</option>
+                        <option value="caballo">Rutas a caballo</option>
+                        <option value="escalada">Escalada </option>
+                    </select>
+                    <br><br>
+
+                    <textarea name="info" id="info" cols="45" rows="5" placeholder="Escribe cualquier información que creas de Interés."></textarea>
+                    <img id="logo" src="../imagenes/logo.png" alt="Logo Madeira">
+                    <br><br>
+
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar formulario">
+                    
+                    <!--Boton de Volver al index.html-->
+                    <a id="btnVolver" href="../index.html"> 
+                        <input type="button" value="Volver">
+                    </a>                    
+                </fieldset>
+            </form>
+        </section>
+        <footer>
+            <strong>Página realizada por José Ramón Blanco Gutiérrez para el módulo de LMSGI</strong>
+        </footer>
+    </div>
+</body>
+</html>

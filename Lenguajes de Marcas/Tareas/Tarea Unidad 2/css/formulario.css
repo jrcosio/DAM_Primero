@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+   
+}
+/*tipo de letra, tamaño y el color de fondo*/
+body {
+    font-family: Calibri;
+    font-size: 16px;
+  
+}
+
+/* --- Layout ---*/
+#layout {
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 3px solid #ffffff;
+    background-color: #3e2723;
+}
+
+header {
+    background-image: url("../imagenes/habitacionhotel.jpg");
+    height: 240px;    
+}
+header h1 {
+    text-align: left;
+    font-size: 48px;
+    padding: 40px;
+    color:#442012
+}
+header h2 {
+    text-align: right;
+    padding-top: 65px;
+    padding-right: 10px;
+    color:#442012
+}
+section {
+    background-color: #bcaaa4;
+    color: #5f2713;
+    max-width: 610px;
+    margin-top: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 40px;
+    border: 8px solid #ffffff;
+}
+
+
+/*Centra el titular*/
+section h1 {
+    text-align: center;
+}
+
+/*Los bordes el pone grosor y color*/
+fieldset {
+    border: 3px solid #3e2723; 
+}
+legend {
+    color: #5f2713;
+}
+
+/*Establece el tamaño de la imagen y pone el borde rojo*/
+#logo {
+    width: 200px;
+    border: 4px solid #3e2723;
+}
+/*Posiciona el botón de volver en la parte derecha*/
+#btnVolver {
+    float: right;
+}
+
+footer {
+    clear: both;
+    background-color: #3e2723;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px;
+}
+

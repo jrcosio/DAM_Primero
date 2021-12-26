@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Formulacio - Actividad Voluntaria 2.7.11</title>
+
+    <style>
+        #contenedor_main {
+            width: 900px;
+            margin: 0 auto;
+            background-color: chocolate;
+            border: 2px solid #000000;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            padding: 5px;
+        }
+        #modulos {
+            width: 860px;
+        }
+        .izquierda {
+            float: left;
+            width: 450px;
+
+        }
+        .derecha {
+            display: inline;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div id="contenedor_main">
+        <h1>Ejemplo de formulario: Matriculación en el ASIR</h1>
+
+        <form name="matriculacion" action="maticula.php" method="get">
+            <!--Todas las etiquetas las ponemos con Label-->
+            <label for="editnombre">Nombre:</label>
+            <input type="text" name="apellidos" id="editnombre" size="20" maxlength="20">
+            
+            <label for="editapellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="editapellidos" size="40" maxlength="40">
+            
+            <label>Sexo:</label>
+            <input type="radio" name="sexo" id="sexoM" value="M">
+            <label for="sexoM">M</label>
+            <input type="radio" name="sexo" id="sexoV" value="V">
+            <label for="sexoV">V</label>
+            
+            <br><br>
+            
+            <!--Sustitución de los selec por un input:date-->
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" name="fecha" id="fecha">
+            <br><br>
+            
+            <!-- Sustitución de la tabla como organizador de elementos por un fieldset y article y div-->
+            <fieldset id="modulos">
+                <legend><strong>Escoge los modulos en los que te matriculas:</strong></legend>
+                <article>
+                    <div class="izquierda">
+                        <input type="checkbox" name="fundamento" id="fund">
+                        <label for="fund">Fundamentos de hardware</label>
+                    </div>
+                    <div class="derecha">
+                        <input type="checkbox" name="servicios" id="ser">
+                        <label for="ser">Servicios de red e internet</label>
+                    </div>                
+                </article>        
+                <article>
+                    <div class="izquierda">
+                        <input type="checkbox" name="so" id="so">
+                        <label for="so">Implantación de Sistemas Operativos</label>
+                    </div>
+                    <div class="derecha">
+                        <input type="checkbox" name="web" id="web">
+                        <label for="web">Implantación de Aplicaciones Web</label>
+                    </td>
+                    </div>
+                </article>
+                <article>
+                    <div class="izquierda">
+                        <input type="checkbox" name="bd" id="bd">
+                        <label for="bd">Gestión de Bases de Datos</label>
+                    </div>
+                    <div class="derecha">
+                        <input type="checkbox" name="ASO" id="ASO">
+                        <label for="ASO">Administración de sistemas Operativos</label>
+                    </div>
+                </article>
+                <article>
+                    <div class="izquierda">
+                        <input type="checkbox" name="redes" id="redes">
+                        <label for="redes">Planificación y Administración de Redes</label>
+                    </div>
+                    <div class="derecha">
+                        <input type="checkbox" name="sgdb" id="sgdb">
+                        <label for="sgdb">Administración de Sistemas Gestores de Bases de Datos</label>
+                    </div>
+                </article>
+                <article>
+                    <div class="izquierda">
+                        <input type="checkbox" name="marcas" id="marcas">
+                        <label for="marcas">Lenguajes de Marcas y Sistemas de Gestión de Información</label>	
+                    </div>
+                    <div class="derecha">
+                        <input type="checkbox" name="seguridad" id="seguridad">
+                        <label for="seguridad">Seguridad y Alta Disponibilidad</label>
+                    </div>
+                </article>
+                <article>
+                    <div class="izquierda">
+                        <input type="checkbox" name="fol" id="fol">
+                        <label for="fol">Formación y Orientación Laboral</label>
+                    </div>
+                    <div class="derecha">
+                        <input type="checkbox" name="eie" id="eie">
+                        <label for="eie">Empresa e Iniciativa Emprendedora</label>
+                    </div>
+                </article>
+                <article>
+                    <div class="izquierda">
+                        <input type="checkbox" name="sir" id="sir">
+                        <label for="sir">Proyecto de Administración de Sistemas Informáticos en Red</label>
+                    </div>
+                    <div class="derecha">
+                        <input type="checkbox" name="fct" id="fct">
+                        <label for="fct">Formación en Centros de Trabajo</label>
+                    </div>
+                </article>
+            </fieldset>
+            
+            
+            <br><br>
+            <label for="estudios">Estudios previos:</label><br>
+            <textarea name="estudio" id="estudios" cols="55" rows="2"></textarea>
+            <br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Restablecer">
+            <p><strong>Pulsa el botón de "enviar" para formalizar la matrícula o el boton de "restablecer" para limpiar el formulario.</strong></p>
+        </form>
+
+    </div>
+    
+</body>
+</html>
