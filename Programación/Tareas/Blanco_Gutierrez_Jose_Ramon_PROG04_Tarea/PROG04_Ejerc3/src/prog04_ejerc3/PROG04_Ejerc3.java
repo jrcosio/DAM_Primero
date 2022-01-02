@@ -38,6 +38,7 @@ public class PROG04_Ejerc3 {
             
             if ((num1 > 0) && (num2 > 0)) {  //Solo entra si los numero introducidos son mayores que 0
                 System.out.println("El MCM de " + num1 + " y " + num2 + " es " + mcm(num1,num2));
+                System.out.println("El MCM de " + num1 + " y " + num2 + " es " + mcm2(num1,num2));
             }else {
                 System.out.println("No se puede calcular, vuelva a intentarlo.");
             }
@@ -62,14 +63,43 @@ public class PROG04_Ejerc3 {
     public static int mcm(int numero1, int numero2){
         
         int max = Math.max(numero1, numero2); //Obtenemos cual es el mayor de los dos numeros, ya que el MCM no puede ser inferior al mayor de los dos.
-        
+     
         while (true) {    //Bucle infinito, se repite tantas veces como sea necesarias hasta que encuentre el MCM        
     
             if ((max % numero1 == 0) && (max % numero2 == 0)) { //hace la comprobación que max es divisinle por los dos, en caso de que sea divisible por ambos numeros
+               
                 return max;                                     //entonces es el MCM y uso return para que devuelva el MCM y a la vez termine el método.
             }
             max++; //Incrementa max para seguir haciendo comprobaciones.
+         
         }
+       
         
     }    
+    
+     public static int mcm2(int num1, int num2) {
+        int mcm = 1;
+        int aux = 2;
+       
+        //Funcionamiento del algoritmo
+        /*
+            Redución de los números utilizando sus divisores hasta 1. La multiplicación de los divisores da el MCM.
+        */
+        while (aux <= num1 || aux <= num2) {
+            if (num1 % aux == 0 || num2 % aux == 0) { //Si aux es divisor de algún número.
+                mcm = mcm * aux;
+                if (num1 % aux == 0) { //Si aux es divisor del num1 le reducimos
+                    num1 = num1 / aux;
+                }
+                if (num2 % aux == 0) { //Si aux es divisor del num2 le reducimos.
+                    num2 = num2 / aux;
+                }
+            } else {
+                aux = aux + 1;
+            }
+          
+        }
+        return mcm;
+               
+    }
 }
