@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Noticias JR Blanco</title>
+        <link>http://localhost/rss/rss.xml</link>
+        <description>Diferentes noticias de la Tarea 3 de Lenguajes de marcas y sistemas de gestión de la información - DAM</description>
+        <language>es-es</language>
+        <item>
+            <title>Blog de IES Augusto González de Linares</title>
+            <link>https://agustoenelaugusto.com/</link>
+            <description>Blog oficial del IES Augusto González de Linares en Pañacastillo - Santander</description>
+            <guid>https://agustoenelaugusto.com/</guid>
+        </item>
+        <item>
+            <title>Web oficial del IES Augusto G. de Linares</title>
+            <link>http://www.iesaglinares.com/</link>
+            <description>Web del IES Augusto González de Linares en Santander, donde encontraras 
+                información sobre el instituto, cursos que se realizan etc...</description>
+            <guid>http://www.iesaglinares.com/</guid>
+        </item>
+        <item>
+            <title>Web de Noticias de Hardware</title>
+            <link>http://localhost/rss/actualidad/</link>
+            <description>Web de Noticias de hardware José Ramón Blanco</description>
+            <guid>http://localhost/rss/actualidad/</guid>
+        </item>
+    </channel>
+</rss>

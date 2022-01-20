@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+}
+header {
+    background-color: rgb(27, 38, 41);
+    padding-bottom: 10px;
+}
+
+header h1 {
+    text-align: center;
+    color: chartreuse;
+}
+header h4 {
+    text-align: center;
+    color: white;
+}
+
+.articulo {
+    background-color: rgb(27, 38, 41);
+    margin: 0 auto;
+    margin-top: 2em;
+    border-radius: 50px;
+    width: 50em;
+   
+}
+.tituloArt {
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+}
+.imagenArt {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border-radius: 30px;
+    margin-top: 1em;
+}
+.textoArt {
+    color: bisque;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 2%;
+    text-align: justify;
+}
+section {
+    margin-bottom: 45px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0vh;
+    width: 100%;
+    background-color: rgb(27, 38, 41);
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}
