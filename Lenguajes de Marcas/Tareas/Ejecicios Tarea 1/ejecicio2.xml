@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8859-1" standalone="yes"?>
+<!DOCTYPE agenda>
+<agenda>
+    <contacto>
+        <nombre>José Ramón</nombre>
+        <apellidos>Blanco Gutiérrez</apellidos>
+        <direccion>Plaza de Maria Blanchard 3 5º A</direccion>
+        <telefonos>
+            <telefono tipo="casa">942343424</telefono>
+            <telefono tipo="movil">677891779</telefono>
+            <telefono tipo="trabajo">942234567</telefono>
+        </telefonos>
+    </contacto>
+    <contacto>
+        <nombre>Luisa</nombre>
+        <apellidos>González Rodríguez</apellidos>
+        <direccion>Paseo de General Davila 220 A 4º B</direccion>
+        <telefonos>
+            <telefono tipo="casa">942123421</telefono>
+            <telefono tipo="movil">699221345</telefono>
+        </telefonos>
+    </contacto>
+    <contacto>
+        <nombre>Sandra</nombre>
+        <apellidos>Diaz González</apellidos>
+        <direccion>Barrio de Bielva 22</direccion>
+        <telefonos>
+            <telefono tipo="casa">942222222</telefono>
+            <telefono tipo="movil">676543212</telefono>
+            <telefono tipo="trabajo">942116633</telefono>
+        </telefonos>
+    </contacto>
+</agenda>
