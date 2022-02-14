@@ -17,7 +17,7 @@ public class Concesionario {
     private Vehiculo[] vehiculos;               //Array de los vehiculos.
     private int numVehiculos;                   //Número de vehiculos en el concesionario
     
-    private final int MAXIMO_VEHICULOS = 50;    //Constate con el número maximo de vehiculos en el consesionario
+    private final int MAXIMO_VEHICULOS = 50;    //Constante con el número maximo de vehiculos en el consesionario
 
     /**
      * CONTRUCTOR
