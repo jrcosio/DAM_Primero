@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT inventario (equipo+)>
 <!ELEMENT equipo (tipo, numserie, fechaadquisicion, ubicacion, caracteristicas)>
 <!ATTLIST equipo idequip CDATA #REQUIRED>

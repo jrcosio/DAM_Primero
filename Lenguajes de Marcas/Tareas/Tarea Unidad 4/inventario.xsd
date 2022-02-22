@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">       
+    <!-- Documentación requerida -->
     <xs:annotation>
         <xs:documentation xml:lang="es-es">
-            Tarea número 4 de LMSGI
-            <modelo>Lenguajes de marcas y sistemas de gestión de la información</modelo>
+            <titulo>Tarea número 4 de LMSGI</titulo>
+            <modulo>Lenguajes de marcas y sistemas de gestión de la información</modulo>
             <fecha>18 de Febrero de 2022</fecha>
             <autor>JOSE RAMON BLANCO GUTIERREZ</autor>
         </xs:documentation>
     </xs:annotation>
-        
-    <xs:simpleType name="tipOld">
+
+    <!-- Definición de los tipos -->
+    <xs:simpleType name="tipoID">
         <xs:restriction base="xs:string">
-            <xs:pattern value="eq3900080[0-9][0-9][0-9]"></xs:pattern>
+            <xs:pattern value="eq3900080[0-9]{3}"/>
         </xs:restriction>
     </xs:simpleType>
     
@@ -25,27 +27,27 @@
     </xs:simpleType>
     
     <xs:simpleType name="tipoDia">
-        <xs:restriction base="xs:integer">
+        <xs:restriction base="xs:positiveInteger">
             <xs:minInclusive value="1"/>
             <xs:maxInclusive value="31"/>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="tipoMes">
-        <xs:restriction base="xs:integer">
+        <xs:restriction base="xs:positiveInteger">
             <xs:minInclusive value="1"/>
             <xs:maxInclusive value="12"/>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="tipoYear">
-        <xs:restriction base="xs:integer">
+        <xs:restriction base="xs:positiveInteger">
             <xs:minInclusive value="1996"/>
             <xs:maxInclusive value="2100"/>
         </xs:restriction>
     </xs:simpleType>
    
-    
+    <!-- Estructura RAIZ -->
     <xs:element name="inventario">
         <xs:complexType>
             <xs:sequence>
@@ -91,7 +93,8 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="idequip" type="tipOld" use="required"/>
+                        <!-- Atributo de Equipo -->
+                        <xs:attribute name="idequip" type="tipoID" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
