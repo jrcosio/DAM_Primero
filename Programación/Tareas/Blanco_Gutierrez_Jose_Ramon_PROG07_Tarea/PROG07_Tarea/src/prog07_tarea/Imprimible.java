@@ -9,8 +9,8 @@ package prog07_tarea;
 public interface Imprimible {
 
     /**
-     * Método que devolvera la información de una cuenta
-     * @return Cadena de caracteres
+     * Método que devolvera la información en forma de cadena de texto
+     * @return Cadena de texto
      */
     public String devolverInfoString();
 }

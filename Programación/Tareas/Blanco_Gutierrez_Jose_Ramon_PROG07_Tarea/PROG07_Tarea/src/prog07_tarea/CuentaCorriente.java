@@ -11,7 +11,10 @@ import java.util.Hashtable;
  * @author JRBlanco
  */
 public abstract class CuentaCorriente extends CuentaBancaria{
-    private Hashtable listaEntidades;
+    /**
+     * Atributo lista de Entidades
+     */
+    private String listaEntidades;
     
     /**
      * Constructor de la Clase
@@ -22,5 +25,22 @@ public abstract class CuentaCorriente extends CuentaBancaria{
     public CuentaCorriente(Persona titular, String iban, double saldo) {
         super(titular, iban, saldo);
     }
+    
+    /**
+     * Método getter del atributo listaEntidades
+     * @return Cadena de texto con la lista de Entidades
+     */
+    public String getListaEntidades() {
+        return listaEntidades;
+    }
+    /**
+     * Método setter del atributo listaEntidades
+     * @param listaEntidades Establece la lista de Entidades
+     */
+    public void setListaEntidades(String listaEntidades) {
+        this.listaEntidades = listaEntidades;
+    }
+    
+    
     
 }

@@ -29,8 +29,31 @@ public abstract class CuentaBancaria implements Imprimible {
     }
     
     /**
+     * Metodo para hacer un ingreso en la cuenta
+     * @param ingreso Dinero que se quiere ingresar
+     */
+    public void ingresoDinero(double ingreso) {
+        this.saldo += ingreso;
+    }
+    
+    /**
+     * Metodo que retira una cantidad de dinero de la cuenta, si el dinero a 
+     * retirar es superior al que tiene no realiza la operación
+     * @param retirar Dinero que se quiere retirar
+     * @return true si se pude realizar la operación y false sino se pudo.
+     */
+    public boolean retirarDinero(double retirar){
+        if (retirar <= this.saldo) {
+            this.saldo -= retirar;
+            return true;
+        }
+        return false;
+    }
+    
+    /**
      * Método getter del atributo titular, que contiene los datos de titular de la cuenta
-     * @return Retorna un objeto persona
+     * @return Retorna un objeto persona, no se retorna directamente el Objeto Titular, para
+     * que haya ninguna posiblilidad de perder el encapsulamiento.
      */
     public Persona getTitular() {
         Persona aux = this.titular;
@@ -71,13 +94,22 @@ public abstract class CuentaBancaria implements Imprimible {
     }
 
     /**
-     * Metodo setter del atributo saldo
-     * @param saldo El saldo que se quiere añadir
+     * Metodo setter del atributo saldo, cambia todo el saldo por el numero.
+     * Nota: No respeta el saldo que se tenga, para eso esta el método retirarDinero.
+     * @param saldo El saldo que se pone
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
-    
-    
+    /**
+     * Metodo sobreescrito de la interfaz Imprimible
+     * @return La información de los atributos de la clase
+     */
+    @Override
+    public String devolverInfoString() {              
+        return "{" + this.iban + " " + 
+                this.titular.devolverInfoString() + " " + 
+                this.saldo + "}";
+    }     
 }

@@ -5,7 +5,7 @@
 package prog07_tarea;
 
 /**
- * Clase CuentaCorrientePersonal
+ * Clase para cerar Cuentas Corrientes Personales
  * @author JRBlanco
  */
 public class CuentaCorrientePersonal extends CuentaCorriente{
@@ -19,17 +19,25 @@ public class CuentaCorrientePersonal extends CuentaCorriente{
      * @param titular Obejeto de tipo Persona (nombre, apellidos y dni)
      * @param iban numero de cuenta IBAN
      * @param saldo saldo de inicio de la cuenta
+     * @param comisionMantenimiento Comisión de Mantenimiento
      */
-    public CuentaCorrientePersonal(Persona titular, String iban, double saldo) {
+     public CuentaCorrientePersonal( Persona titular, String iban, double saldo,float comisionMantenimiento) {
         super(titular, iban, saldo);
+        this.comisionMantenimiento = comisionMantenimiento;
     }
 
+    /**
+     * Método de oblidatoria implementación por la interface Imprimible y este es para visualizar los atributos.
+     * @return Cadena de texto que devuelve los atributos de la clase
+     */
     @Override
     public String devolverInfoString() {
-       return "C. C. Personal { " + this.getIban() + " " + 
-                       this.getTitular().devolverInfoString() + " " + 
-                       this.getSaldo() + " " + 
-                       this.getComisionMantenimiento() + " }";
+        String contenido = super.devolverInfoString();              //Llamamo a la método de la clase padre
+        
+        contenido = contenido.substring(0, contenido.length()-1);   //Se quita el corchete final
+        
+        return "C. C. Personal   " + contenido + " " + this.getComisionMantenimiento() + "}";
+        
     }    
     
     /**

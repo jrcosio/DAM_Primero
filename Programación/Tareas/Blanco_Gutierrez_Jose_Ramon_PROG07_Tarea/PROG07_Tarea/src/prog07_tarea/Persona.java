@@ -2,7 +2,7 @@
 package prog07_tarea;
 
 /**
- *
+ *  Clase Persona para almanecar los datos de una persona
  * @author JRBlanco
  */
 public class Persona implements Imprimible {

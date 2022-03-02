@@ -12,12 +12,22 @@
 
     <!-- Definición de los tipos -->
     <xs:simpleType name="tipoID">
+        <xs:annotation>
+            <xs:appinfo>
+                <texto_ayuda>Dato de tipo cadena de caracteres que empieza por “eq3900080”, le siguen 3 caracteres numéricos del 0 al 9</texto_ayuda>
+            </xs:appinfo>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="eq3900080[0-9]{3}"/>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="tipoEquipo">
+        <xs:annotation>
+            <xs:appinfo>
+                <texto_ayuda>Dato de tipo cadena de caracteres que puede tomar uno de los siguientes valores: CPU_Torre, Impresora, Monitor o Portatil</texto_ayuda>
+            </xs:appinfo>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:enumeration value="CPU_Torre"/>
             <xs:enumeration value="Impresora"/>
@@ -27,6 +37,11 @@
     </xs:simpleType>
     
     <xs:simpleType name="tipoDia">
+        <xs:annotation>
+            <xs:appinfo>
+                <texto_ayuda>Dato de tipo numérico entero positivo que puede tomar valores entre 1 y 31.</texto_ayuda>
+            </xs:appinfo>
+        </xs:annotation>
         <xs:restriction base="xs:positiveInteger">
             <xs:minInclusive value="1"/>
             <xs:maxInclusive value="31"/>
@@ -34,6 +49,11 @@
     </xs:simpleType>
     
     <xs:simpleType name="tipoMes">
+        <xs:annotation>
+            <xs:appinfo>
+                <texto_ayuda>Dato de tipo numérico entero positivo que puede tomar valores entre 1 y 12</texto_ayuda>
+            </xs:appinfo>
+        </xs:annotation>
         <xs:restriction base="xs:positiveInteger">
             <xs:minInclusive value="1"/>
             <xs:maxInclusive value="12"/>
@@ -41,6 +61,11 @@
     </xs:simpleType>
     
     <xs:simpleType name="tipoYear">
+        <xs:annotation>
+            <xs:appinfo>
+                <texto_ayuda>Dato de tipo numérico entero positivo que puede tomar valores entre 1996 y 2100</texto_ayuda>
+            </xs:appinfo>
+        </xs:annotation>
         <xs:restriction base="xs:positiveInteger">
             <xs:minInclusive value="1996"/>
             <xs:maxInclusive value="2100"/>
@@ -94,7 +119,7 @@
                             </xs:element>
                         </xs:sequence>
                         <!-- Atributo de Equipo -->
-                        <xs:attribute name="idequip" type="tipoID" use="required"/>
+                        <xs:attribute name="idequip" type="tipoID" use="required"/> 
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

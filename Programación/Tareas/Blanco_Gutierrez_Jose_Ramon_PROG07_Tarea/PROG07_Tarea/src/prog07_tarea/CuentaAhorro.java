@@ -5,7 +5,7 @@
 package prog07_tarea;
 
 /**
- *
+ * Clase Cuenta de ahorro
  * @author JRBlanco
  */
 public class CuentaAhorro extends CuentaBancaria{
@@ -46,10 +46,11 @@ public class CuentaAhorro extends CuentaBancaria{
      */
     @Override
     public String devolverInfoString() {
-        return "Cuenta de ahorro { " + this.getIban() + " " + 
-                      this.getTitular().devolverInfoString() + " " + 
-                      this.getSaldo() + " " + 
-                      this.getTipoInteresAnual() + " }";
+        String contenido = super.devolverInfoString();              //Llamamo a la método de la clase padre
+        
+        contenido = contenido.substring(0, contenido.length()-1);   //Se quita el corchete final
+        
+        return "C. de Ahorro     " + contenido + " " + this.getTipoInteresAnual() + "}";
                       
     }
     
