@@ -21,9 +21,11 @@ public abstract class CuentaCorriente extends CuentaBancaria{
      * @param titular Objeto que es el titular de la cuenta (Nombre, apellidos y dni)
      * @param iban numero de cuenta IBAN
      * @param saldo Saldo con el que iniciar la cuenta corriente
+     * @param lista Lista de Entidades autorizadas
      */
-    public CuentaCorriente(Persona titular, String iban, double saldo) {
+    public CuentaCorriente(Persona titular, String iban, double saldo, String lista) {
         super(titular, iban, saldo);
+        this.listaEntidades = lista;
     }
     
     /**
@@ -40,7 +42,17 @@ public abstract class CuentaCorriente extends CuentaBancaria{
     public void setListaEntidades(String listaEntidades) {
         this.listaEntidades = listaEntidades;
     }
-    
-    
-    
+
+    /**
+     * Método de la interface Imprimible y  es para visualizar los atributos de la clase
+     * @return Cadena de texto que devuelve los atributos de la clase
+     */
+    @Override
+    public String devolverInfoString() {
+        String contenido = super.devolverInfoString();              //Llamamo a la método de la clase padre
+        
+        contenido = contenido.substring(0, contenido.length()-1);   //Se quita el corchete final
+        
+        return contenido + " " + this.getListaEntidades() + "}";    // Añadirmos Lista de Entidades y el cerramos el corchete
+    }
 }

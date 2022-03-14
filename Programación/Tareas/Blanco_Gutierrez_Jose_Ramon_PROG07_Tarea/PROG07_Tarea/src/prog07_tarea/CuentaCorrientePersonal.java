@@ -19,10 +19,12 @@ public class CuentaCorrientePersonal extends CuentaCorriente{
      * @param titular Obejeto de tipo Persona (nombre, apellidos y dni)
      * @param iban numero de cuenta IBAN
      * @param saldo saldo de inicio de la cuenta
+     * @param lista Lista de entidades
      * @param comisionMantenimiento Comisión de Mantenimiento
      */
-     public CuentaCorrientePersonal( Persona titular, String iban, double saldo,float comisionMantenimiento) {
-        super(titular, iban, saldo);
+     public CuentaCorrientePersonal( Persona titular, String iban, double saldo,String lista, 
+                                        float comisionMantenimiento) {
+        super(titular, iban, saldo, lista);
         this.comisionMantenimiento = comisionMantenimiento;
     }
 

@@ -76,6 +76,11 @@
     <xs:element name="inventario">
         <xs:complexType>
             <xs:sequence>
+                <xs:annotation>
+                    <xs:appinfo>
+                        <texto_ayuda>Equipo es la descripción de los diferentes equipos</texto_ayuda>
+                    </xs:appinfo>
+                </xs:annotation>
                 <xs:element name="equipo" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>

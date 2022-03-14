@@ -15,12 +15,22 @@ public class CuentaCorrienteEmpresa extends CuentaCorriente {
     private float tipoInteresDescubierto;
     private double maximoDescubiertoPermitido, comisionDescubierto;
 
-    
-    public CuentaCorrienteEmpresa(Persona titular, String iban, double saldo, 
+    /**
+     * Constructor de la clase
+     * 
+     * @param titular Clase persona con los datos del titulas
+     * @param iban  Numero de cuenta
+     * @param saldo Dinero de inicio de suenta
+     * @param lista Lista de Entidades
+     * @param interesXDescubierto   Intereses por Descubierto
+     * @param maxDescubierto        Máximo por descubierto
+     * @param comisionDescubierto   Comisión de descubierto
+     */
+    public CuentaCorrienteEmpresa(Persona titular, String iban, double saldo, String lista, 
                                     float interesXDescubierto, 
                                     double maxDescubierto, 
                                     double comisionDescubierto) {
-        super(titular, iban, saldo);
+        super(titular, iban, saldo, lista);
         this.tipoInteresDescubierto = interesXDescubierto;
         this.maximoDescubiertoPermitido = maxDescubierto;
         this.comisionDescubierto = comisionDescubierto;

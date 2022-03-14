@@ -98,7 +98,7 @@ public class Principal{
                 /**
                  * Crea el objeto de la clase Cuenta Corriente Persona
                  */
-                CuentaCorrientePersonal ccp = new CuentaCorrientePersonal(new Persona(nombre, apellidos, dni),iban,dinero,comisionMantenimiento);
+                CuentaCorrientePersonal ccp = new CuentaCorrientePersonal(new Persona(nombre, apellidos, dni),iban,dinero,null,comisionMantenimiento);
                 return ccp;      //Devolvemos el Objeto CuentaCorrientePersonal
             case 3: //3. Cuenta corriente de empresa
                 System.out.println("Introduce máximo de descubierto:");
@@ -113,7 +113,7 @@ public class Principal{
                 /**
                  * Crea el objeto de la clase de la cuenta corriente de empresa
                  */
-                CuentaCorrienteEmpresa cce = new CuentaCorrienteEmpresa(new Persona(nombre, apellidos, dni),iban,dinero,interesDescubierto,maxDescubierto,comisionDescubierto);
+                CuentaCorrienteEmpresa cce = new CuentaCorrienteEmpresa(new Persona(nombre, apellidos, dni),iban,dinero,null,interesDescubierto,maxDescubierto,comisionDescubierto);
                 return cce;     //Devolvemos el objeto CuentaCorrienteEmpresa
         }              
         return null;    //Sino es ninguna de las 3 opciones retorna NULL
