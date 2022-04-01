@@ -21,7 +21,7 @@ de la familia  XXXXXX a la familia ZZZZZZ" donde XXX es el n�mero de agentes
 que se han cambiado de familia, XXXXXX es el nombre de la familia origen y 
 ZZZZZZ es el nombre de la familia destino. */
 
--- Jos� Ram�n Blanco Guti�rrez
+-- José Ramón Blanco Gutiérrez
 
 create or replace procedure CambiarAgentesFamilia( id_FamiliaOrigen familias.identificador%TYPE, id_FamiliaDestino familias.identificador%TYPE) 
 is
@@ -33,6 +33,9 @@ is
     nombreFamiliaOrigen familias.nombre%TYPE;   -- Para guardar el nombre de la familia de Origen
     nombreFamiliaDestino familias.nombre%TYPE;  -- Para guardar el nombre de la familia de Destino
     contadorCambios number;                     -- Para guardar el numero de cambios que se hacen
+    
+    error_numero number;
+    error_mensaje varchar2(200);
     
 begin
     -- Comprobamos que son diferentes los ID
@@ -66,10 +69,17 @@ begin
                              ' a la familia ' || nombrefamiliadestino);
         dbms_output.put_line('-------------------------------------------------------------------------------');
     else
-        dbms_output.put_line('-------------------------------------------------------------------------------');
-        dbms_output.put_line('En la tabla Agentes no hay ning�n registro de la familia ' || nombrefamiliaorigen);
-        dbms_output.put_line('-------------------------------------------------------------------------------'); 
+        raise_application_error(-20003, 'En la tabla Agentes no hay ning�n registro de la familia origen');
     end if;
+    
+    commit;
+    
+exception
+    when others then
+        error_numero := SQLCODE;
+        error_mensaje := substr(SQLERRM, 1, 200);
+        dbms_output.put_line('ERROR: Mensaje: ' || error_mensaje || 'Codigo:' || to_char(error_numero));
+        rollback;
 end;
 
 
@@ -77,7 +87,7 @@ end;
 set SERVEROUTPUT on;
 
 begin
-    CambiarAgentesFamilia(211,21);
+    CambiarAgentesFamilia(21,11);
     -- CambiarAgentesFamilia(11,212);
 end;
 

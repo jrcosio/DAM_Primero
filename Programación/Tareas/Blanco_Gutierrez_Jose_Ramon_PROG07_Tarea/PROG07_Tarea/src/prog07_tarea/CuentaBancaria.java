@@ -1,6 +1,8 @@
 
 package prog07_tarea;
 
+import java.util.Objects;
+
 /**
  * Clase Abstracta CuentaBancaria
  * 
@@ -111,5 +113,5 @@ public abstract class CuentaBancaria implements Imprimible {
         return "{" + this.iban + " " + 
                 this.titular.devolverInfoString() + " " + 
                 this.saldo + "}";
-    }     
+    }       
 }
