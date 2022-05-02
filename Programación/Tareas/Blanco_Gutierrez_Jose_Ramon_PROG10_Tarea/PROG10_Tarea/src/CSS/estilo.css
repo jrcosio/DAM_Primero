@@ -1,0 +1,41 @@
+/*---Botones---*/
+.botonesNegros {
+    -fx-background-color: #3b3b3b;
+    -fx-background-radius: 100px;
+}
+.botonesNegros:hover {
+    -fx-background-color: #606060;
+    -fx-background-radius: 100px;
+}
+.botonesNegros:pressed { 
+    -fx-background-color: #909090;
+    -fx-background-radius: 100px;
+}
+
+/*---Botones de las Operaciones---*/
+.botonesNaranjas {
+    -fx-background-color: #e68d00;
+    -fx-background-radius: 100px;    
+}
+.botonesNaranjas:hover {
+    -fx-background-color:  #d89e41;
+    -fx-background-radius: 100px;    
+}
+.botonesNaranjas:pressed {
+    -fx-background-color:  #dbaf69;
+    -fx-background-radius: 100px;    
+}
+
+/*---Botón del igual---*/
+.botonesAzules {
+    -fx-background-color:  #4cc2ff;
+    -fx-background-radius: 100px;
+}
+.botonesAzules:hover {
+    -fx-background-color:  #0087cc;
+    -fx-background-radius: 100px;
+}
+.botonesAzules:pressed {
+    -fx-background-color:  #5da4c8;
+    -fx-background-radius: 100px;
+}

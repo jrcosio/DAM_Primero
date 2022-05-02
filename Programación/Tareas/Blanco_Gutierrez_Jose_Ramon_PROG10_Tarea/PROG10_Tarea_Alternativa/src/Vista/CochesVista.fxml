@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="993.0" style="-fx-background-color: #2A2E37;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.CochesController">
+   <children>
+      <TableView fx:id="tablaVehiculos" layoutX="10.0" layoutY="47.0" prefHeight="538.0" prefWidth="924.0" stylesheets="@../CSS/estilos.css" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="47.0">
+        <columns>
+          <TableColumn fx:id="columMarca" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Marca" />
+          <TableColumn fx:id="columMatricula" maxWidth="74.0" minWidth="74.0" prefWidth="74.0" text="Matrícula" />
+            <TableColumn fx:id="columKm" maxWidth="67.0" minWidth="67.0" prefWidth="67.0" text="Km" />
+            <TableColumn fx:id="columFecha" maxWidth="94.0" minWidth="94.0" prefWidth="94.0" text="Fecha Mat." />
+            <TableColumn fx:id="columDescrip" maxWidth="280.0" minWidth="185.0" prefWidth="216.0" text="Descripción" />
+            <TableColumn fx:id="columPrecio" maxWidth="123.0" minWidth="65.0" prefWidth="92.0" text="Precio" />
+            <TableColumn fx:id="columPropietario" minWidth="0.0" prefWidth="120.0" text="Propietario" />
+            <TableColumn fx:id="columDni" maxWidth="227.0" minWidth="77.0" prefWidth="107.0" text="DNI" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem disable="true" mnemonicParsing="false" text="Menú tabla vehiculos" />
+                  <SeparatorMenuItem mnemonicParsing="false" />  
+                <MenuItem fx:id="menuBorrarVehiculo" mnemonicParsing="false" onAction="#clickBorrarVehiculo" text="Borrar vehiculo" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Label alignment="TOP_CENTER" layoutX="10.0" prefHeight="40.0" prefWidth="924.0" text="Gestión de Vehículos DAM Programación" textFill="#0094ff" AnchorPane.bottomAnchor="609.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="174.0" layoutY="607.0" prefHeight="58.0" prefWidth="544.0" spacing="50.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#clickNuevoVehiculo" prefHeight="48.0" prefWidth="200.0" stylesheets="@../CSS/estilos.css" text="Añadir nuevo vehículo" textFill="#ddff00" />
+            <Button mnemonicParsing="false" onAction="#clickEditarVehiculo" prefHeight="48.0" prefWidth="200.0" stylesheets="@../CSS/estilos.css" text="Editar vehículo" textFill="#ddff00" />
+            <Button mnemonicParsing="false" onAction="#clickSalir" prefHeight="48.0" prefWidth="200.0" stylesheets="@../CSS/estilos.css" text="Salir del programa" textFill="#ddff00" />
+         </children>
+      </HBox>
+      <Label layoutX="808.0" layoutY="583.0" text="Por José Ramón Blanco Gutiérrez" textFill="#489aff" AnchorPane.bottomAnchor="59.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="10.0" layoutY="583.0" text="Tarea 10 - DAM Programación" textFill="#489aff" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="10.0" />
+   </children>
+</AnchorPane>

@@ -5,7 +5,6 @@
 {es44444444444444444444 , Josera Blanco}
 {es33333333333333333333 , Pablo Blanco}
 {es22222222222222222222 , Jose Ramon Blanco}
-{es55555555555555555555 , Emma Gutierrez}
 --------------------------------------------------
-Total de cuentas existentes: 5
+Total de cuentas existentes: 4
 --------------------------------------------------

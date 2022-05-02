@@ -13,8 +13,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.HashSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Clase Banco para la gestión de las cuentas del Banco
@@ -202,11 +200,12 @@ public class Banco {
         try {
             fichero = new FileInputStream("datoscuentasbancarias.dat");
             salida = new ObjectInputStream(fichero);        
-            try {
-                this.cuentasBancarias = (HashSet) salida.readObject(); //Lee todo el fichero y como es de tipo Object pues lo casteamos al tipo de la colección
-            } catch (ClassNotFoundException ex) {
-                System.out.println(ex.getMessage());
-            }    
+            
+            this.cuentasBancarias = (HashSet) salida.readObject(); //Lee todo el fichero y como es de tipo Object pues lo casteamos al tipo de la colección
+            
+        } catch (ClassNotFoundException ex) {
+            System.out.println(ex.getMessage());
+            valorRetorno = false;
         } catch (FileNotFoundException ex) {
             System.out.println(ex.getMessage());
             valorRetorno = false;
